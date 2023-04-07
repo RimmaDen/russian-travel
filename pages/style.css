@@ -1,6 +1,5 @@
 .page {
   max-width: 1280px;
-  margin: 0 auto;
   color: #FFFFFF;
   background-color: #2A2C2F;
   font-family: "Inter", "Arial";
@@ -18,23 +17,24 @@
   border: solid red;
 }
 .header__logo {
-  width: 176px;
-  height: 52px;
+  max-width: 176px;
 }
 .header__lang-links {
+  display: flex;
+  font-family: "Inter";
   font-weight: 400;
   line-height: 28px;
   font-size: 24px;
-    
+  gap: 18px;    
 }
-.header__lang-link {
-  color: #FFFFFF;
-  text-align: right;
-}
-.header__lang-link:last-child {
-  margin-left: 18px;
+.header__lang-link_active:hover {
   text-decoration: none;
 }
+.header__lang-link {
+  color: #FFFFFF;  
+  text-align: right;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -123,77 +123,131 @@
 .photo-grid {
   width: calc(100% - 96px);
   margin-top: 92px;
+  margin-left: 48px;
+  margin-right: 48px;
+  border: solid blueviolet;
 }
 .photo-grid__items {
   display: grid;
   list-style-type: none;
-  margin-top: 92px;
+  margin: 0;
+  padding: 0;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 14px;
-  width: 100%;
   }
 .photo-grid__item {
-  border-style: none;
-  width: 100%;
-  box-sizing: border-box;
- 
-
-}
+   margin: 0;
+   padding: 0;
+   max-width: 300px;
+  
+   
+ }
 .photo-grid__image {
-  object-fit: cover;
-  border-style: none;
+  width: 100%;
 }
+.places {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ box-sizing: border-box;
+ width: calc(100% - 96px);
+ 
+}
+.places__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  grid-gap: 48px 40px; 
+  row-gap: 80px;
+  max-width: 928px;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  border: solid rgb(95, 226, 43);
+}
+.place {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 640px;
+  border: solid blueviolet;
+}
+.place__image {
+  max-width: 440px;
+  max-height: 440px;
+  object-fit: cover;
+}
+
 
 .cover {
   background-color:#181A19; 
-  display: flex;
-  padding-top: 92px;
-  padding-bottom: 92px;
+  margin-top: 92px;
+  width: 100%;
+  height: 640px;
+  border: solid rgb(95, 226, 43);
 }
 
 .cover__overlay {
    display: flex;
-   margin: auto;
    flex-direction: column;
-   width: 1184px;
-   height: 740px;
-   background-image: url(https://cd2.dvizhenie24.ru/2023/01/001-j21-railway-734-101-1000x521.jpg);
+   background-image: url(../sprint-3-images/cover-trains.jpg);
+   background-position: center;
    background-size: cover;
-   transition: opacity 0.3s easy;
+   height: 640px;
+   width: 100%;
   }
 
-.cover__overlay:hover{
+.cover__overlay:hover {
     opacity: 0.2;
-        }
-
+  }
 .cover__title {
     font-family: 'Inter';
     font-weight: 900;
     font-size: 72px;
     line-height: 76px;
-    text-align: center;
-   margin: auto;
-    margin-bottom: 0;
+    align-self: first baseline;
+   align-self: center;
+   text-align: center;
+    margin-top: 195px;
+    margin-bottom: 32px;
+    padding: 0;
     color: #FFFFFF;
     max-width: 560px;
     z-index: 1;
-    }
+   }
 
 .cover__subtitle {
   font-family: 'Inter';
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    margin: auto;
-    margin-top: 0;
+    align-self: center;
     text-align: center;
     color: #FFFFFF;
     max-width: 360px;
     z-index: 1;
-    padding-top: 32px;
-}
 
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 96px);
+  margin: 92px auto 24px;
+  border: solid red;
+}
+.footer__links {
+  border: solid red;
+}
+.footer__link {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  border: solid red;
+}
   .footer__copyright {
     margin: 0;
     font-weight: 400;
+    border: solid red;
    }
