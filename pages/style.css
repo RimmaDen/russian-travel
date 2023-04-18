@@ -1,5 +1,8 @@
-@import url('../vendors/inter.css');
+@import url('../vendors/fonts.css');
 
+body {
+  font-family: 'Inter';
+}
 .page {
   max-width: 1280px;
   color: #FFFFFF;
@@ -192,32 +195,42 @@
 
 .cover {
   background-color:#181A19;
-  font-family: 'Inter'; 
+  font-family: 'Inter';
+  display: flex;
+  background-image: url('../sprint-3-images/cover-trains.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center; 
   margin-top: 92px;
-  width: 100%;
-  height: 640px;
-  border: solid rgb(95, 226, 43);
+  
 }
-
+.cover::after {
+  content: "";
+  width: 0;
+  height: 0;
+  padding-top: calc(740 / 1184 * 100%);
+}
 .cover__overlay {
    display: flex;
-   flex-direction: column;
-   background-image: url(../sprint-3-images/cover-trains.jpg);
-   background-position: center;
-   background-size: cover;
-   height: 640px;
+   justify-content: center;
+   align-items: center;
    width: 100%;
+   margin: 0;
+   padding: 0;
+   flex-direction: column;
+   text-decoration: none;
+
   }
 
 .cover__overlay:hover {
-    opacity: 0.2;
+  background:rgb(0, 0, 0, 0.3);
   }
 .cover__title {
-    font-family: 'Inter';
+  font-family: 'Inter';
     font-weight: 900;
     font-size: 72px;
     line-height: 76px;
-    align-self: first baseline;
    align-self: center;
    text-align: center;
     margin-top: 195px;
